@@ -1,0 +1,52 @@
+/* src/pages/customer/PagarOrden.css */
+.pagar { max-width: 480px; margin: 32px auto; padding: 0 20px; }
+.pagar__card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow-lg); padding: 32px; }
+.pagar__title { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--brown); margin-bottom: 20px; }
+
+.pagar__summary { background: var(--cream); border-radius: 8px; padding: 14px 16px; margin-bottom: 24px; }
+.pagar__summary-row { display: flex; justify-content: space-between; font-size: 14px; color: var(--gray-700); margin-bottom: 6px; }
+.pagar__summary-row--total { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(45,30,14,.15); font-weight: 700; font-size: 16px; color: var(--brown); }
+
+.pagar__section-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--gray-700); margin-bottom: 12px; }
+.pagar__method-btns { display: flex; gap: 12px; margin-bottom: 24px; }
+.pagar__method-btn  { flex: 1; padding: 12px; border: 2px solid var(--gray-100); border-radius: 10px; background: var(--white); cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--brown); font-family: var(--font-body); transition: all .15s; }
+.pagar__method-btn:hover { border-color: var(--gold); }
+.pagar__method-btn--active { border-color: var(--gold); background: #fdf8f2; color: var(--gold); }
+.pagar__method-icon { font-size: 26px; }
+
+.pagar__form { margin-bottom: 24px; }
+.pagar__form-row { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+.pagar__form-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.pagar__label { font-size: 12px; font-weight: 700; color: var(--gray-700); text-transform: uppercase; letter-spacing: .4px; }
+.pagar__input { padding: 10px 12px; border: 1.5px solid var(--gray-100); border-radius: 8px; font-size: 14px; background: var(--white); color: var(--brown); outline: none; font-family: var(--font-body); transition: border .15s; width: 100%; }
+.pagar__input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(181,115,42,.1); }
+.pagar__input--sm { max-width: 100px; }
+
+.pagar__btn { width: 100%; padding: 14px; background: var(--gold); color: #fff; border: none; border-radius: 8px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: var(--font-body); transition: background .15s; margin-bottom: 10px; }
+.pagar__btn:hover:not(:disabled) { background: var(--gold-light); }
+.pagar__btn:disabled { opacity: .6; cursor: not-allowed; }
+
+.pagar__cancel { width: 100%; padding: 10px; background: transparent; color: var(--gray-500); border: none; font-size: 13px; cursor: pointer; font-family: var(--font-body); }
+.pagar__cancel:hover { color: var(--red); }
+
+/* ── Error de pago ── */
+.pagar__error {
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #fef2f2;
+  border: 1.5px solid #fca5a5;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  animation: shakeX .4s ease;
+}
+@keyframes shakeX {
+  0%,100% { transform: translateX(0); }
+  20%,60%  { transform: translateX(-6px); }
+  40%,80%  { transform: translateX(6px); }
+}
+.pagar__error-icon  { font-size: 22px; flex-shrink: 0; }
+.pagar__error-title { font-weight: 700; color: #b91c1c; font-size: 14px; margin-bottom: 4px; }
+.pagar__error-msg   { color: #7f1d1d; font-size: 13px; margin-bottom: 4px; }
+.pagar__error-code  { font-size: 11px; color: #9ca3af; margin-bottom: 4px; font-family: monospace; }
+.pagar__error-hint  { font-size: 12px; color: #6b7280; }

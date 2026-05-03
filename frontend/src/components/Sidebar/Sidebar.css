@@ -1,0 +1,119 @@
+/* src/components/Sidebar/Sidebar.css */
+.sidebar {
+  position: fixed;
+  top: var(--header-h);
+  left: 0;
+  bottom: 0;
+  width: var(--sidebar-w);
+  overflow: hidden;
+  background: var(--cream);
+  border-right: 1px solid rgba(45, 30, 14, 0.12);
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+  transition: transform 0.3s ease;
+}
+
+.sidebar--closed {
+  transform: translateX(-100%);
+}
+
+.sidebar__inner {
+  width: var(--sidebar-w);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 12px 0;
+}
+
+.sidebar__back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--brown);
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+  font-family: var(--font-body);
+}
+.sidebar__back:hover { color: var(--gold); }
+
+.sidebar__divider {
+  border: none;
+  border-top: 1px solid rgba(45, 30, 14, 0.18);
+  margin: 0 20px 8px;
+}
+
+.sidebar__links { flex: 1; }
+
+.sidebar__link-btn {
+  width: 100%;
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--brown);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+  text-align: left;
+  font-family: var(--font-body);
+  transition: color var(--transition), background var(--transition);
+}
+.sidebar__link-btn:hover { color: var(--gold); background: rgba(181,115,42,0.06); }
+.sidebar__link-btn--active { color: var(--gold); }
+
+.sidebar__link-icon { width: 20px; flex-shrink: 0; }
+
+.sidebar__link-divider {
+  border: none;
+  border-top: 1px solid rgba(45, 30, 14, 0.1);
+  margin: 0 20px;
+}
+
+.sidebar__footer { padding-bottom: 4px; }
+.sidebar__footer-divider {
+  border: none;
+  border-top: 1px solid rgba(45, 30, 14, 0.18);
+  margin: 0 20px 8px;
+}
+
+.sidebar__logout-btn {
+  width: 100%;
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--red);
+  font-weight: 700;
+  font-size: 13px;
+  font-family: var(--font-body);
+  transition: opacity var(--transition);
+}
+.sidebar__logout-btn:hover { opacity: 0.75; }
+
+.sidebar__login-btn {
+  width: 100%;
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--brown);
+  font-weight: 700;
+  font-size: 13px;
+  font-family: var(--font-body);
+}
+.sidebar__login-btn:hover { color: var(--gold); }

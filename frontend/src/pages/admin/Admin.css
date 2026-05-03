@@ -1,0 +1,208 @@
+/* src/pages/admin/Admin.css */
+.admin-page { padding: 28px 32px; }
+.admin-page__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.admin-page__title { font-size: 22px; font-weight: 700; color: var(--brown); }
+
+/* Tabla admin */
+.admin-table-wrapper { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: auto; }
+.admin-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.admin-table th {
+  padding: 12px 16px; text-align: left;
+  font-weight: 700; font-size: 11px; text-transform: uppercase;
+  color: var(--gray-500); background: var(--cream);
+  border-bottom: 2px solid var(--cream-dark); white-space: nowrap;
+}
+.admin-table td { padding: 12px 16px; border-bottom: 1px solid var(--cream-dark); vertical-align: middle; }
+.admin-table tr:last-child td { border-bottom: none; }
+
+/* Inventario grid */
+.inventario__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 20px; }
+.inventario__card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; transition: transform var(--transition); }
+.inventario__card:hover { transform: translateY(-3px); }
+.inventario__card-img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; cursor: pointer; }
+.inventario__card-body { padding: 12px; }
+.inventario__card-name { font-size: 13px; font-weight: 600; color: var(--brown); margin-bottom: 3px; }
+.inventario__card-stars { color: #f39c12; font-size: 12px; margin-bottom: 2px; }
+.inventario__card-stock { font-size: 12px; color: var(--gray-500); margin-bottom: 4px; }
+.inventario__card-price { font-size: 14px; font-weight: 700; color: var(--green); margin-bottom: 10px; }
+.inventario__card-actions { display: flex; gap: 8px; }
+.inventario__btn-delete { background: var(--red); border: none; border-radius: 6px; padding: 6px 10px; cursor: pointer; font-size: 15px; color: #fff; transition: opacity var(--transition); }
+.inventario__btn-delete:hover { opacity: 0.8; }
+.inventario__btn-edit   { background: #f39c12; border: none; border-radius: 6px; padding: 6px 10px; cursor: pointer; font-size: 15px; transition: opacity var(--transition); }
+.inventario__btn-edit:hover { opacity: 0.8; }
+
+.inventario__fab {
+  position: fixed; bottom: 28px; right: 28px;
+  background: var(--brown); color: #fff; border: none;
+  border-radius: 30px; padding: 12px 24px;
+  font-size: 14px; font-weight: 700; cursor: pointer;
+  box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 8px;
+  font-family: var(--font-body); transition: background var(--transition);
+}
+.inventario__fab:hover { background: var(--brown-mid); }
+
+/* Formulario modal */
+.admin-form__group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+.admin-form__label { font-size: 12px; font-weight: 700; color: var(--gray-700); text-transform: uppercase; letter-spacing: 0.4px; }
+.admin-form__input {
+  padding: 10px 12px; border: 1.5px solid var(--gray-100);
+  border-radius: 8px; font-size: 14px; background: var(--white);
+  color: var(--brown); outline: none; transition: border var(--transition);
+  font-family: var(--font-body); width: 100%;
+}
+.admin-form__input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(181,115,42,.12); }
+.admin-form__textarea { resize: vertical; min-height: 80px; }
+
+.admin-form__actions { display: flex; gap: 10px; margin-top: 8px; }
+.admin-btn-save {
+  padding: 10px 24px; background: var(--gold); color: #fff;
+  border: none; border-radius: 8px; font-size: 14px; font-weight: 700;
+  cursor: pointer; font-family: var(--font-body); transition: background var(--transition);
+}
+.admin-btn-save:hover:not(:disabled) { background: var(--gold-light); }
+.admin-btn-save:disabled { opacity: 0.6; }
+.admin-btn-cancel {
+  padding: 10px 24px; background: transparent; color: var(--gold);
+  border: 2px solid var(--gold); border-radius: 8px; font-size: 14px;
+  font-weight: 700; cursor: pointer; font-family: var(--font-body);
+  transition: all var(--transition);
+}
+.admin-btn-cancel:hover { background: var(--gold); color: #fff; }
+.admin-btn-danger {
+  padding: 10px 24px; background: var(--red); color: #fff;
+  border: none; border-radius: 8px; font-size: 14px; font-weight: 700;
+  cursor: pointer; font-family: var(--font-body); transition: background var(--transition);
+}
+.admin-btn-danger:hover:not(:disabled) { background: #c0392b; }
+.admin-btn-danger:disabled { opacity: 0.6; }
+
+/* Status badge */
+.status-badge { padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; display: inline-block; }
+.status-badge--pendiente  { background: #fff8e6; color: #a16207; }
+.status-badge--pagado     { background: #f0fdf4; color: #15803d; }
+.status-badge--enviado    { background: #eff6ff; color: #1d4ed8; }
+.status-badge--entregado  { background: #f0fdf4; color: #15803d; }
+.status-badge--cancelado  { background: #fef2f2; color: #b91c1c; }
+
+/* Reportes KPIs */
+.reportes__kpis { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap: 16px; margin-bottom: 28px; }
+.kpi-card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px; text-align: center; }
+.kpi-card__label { font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--gray-500); letter-spacing: .5px; margin-bottom: 8px; }
+.kpi-card__value { font-size: 28px; font-weight: 700; color: var(--brown); line-height: 1; }
+.kpi-card__value--green  { color: var(--green); }
+.kpi-card__value--gold   { color: var(--gold); }
+.kpi-card__sub { font-size: 12px; color: var(--gray-500); margin-top: 6px; }
+
+/* Envios filter */
+.envios__filters { display: flex; gap: 8px; flex-wrap: wrap; }
+.envios__filter-btn { padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; border: none; background: var(--gray-100); color: var(--brown); transition: all .15s; font-family: var(--font-body); }
+.envios__filter-btn--active { background: var(--gold); color: #fff; }
+.envios__status-select { padding: 5px 8px; border-radius: 6px; border: 1.5px solid var(--gray-100); font-size: 12px; background: var(--white); cursor: pointer; font-family: var(--font-body); }
+
+/* Usuarios */
+.usuarios__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 20px; }
+.usuario-card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px; }
+.usuario-card--me { border: 2px solid var(--gold); background: #fdf8f2; }
+.usuario-card__info { display: flex; gap: 14px; align-items: flex-start; }
+.usuario-card__avatar { width: 64px; height: 64px; border-radius: 8px; background: var(--cream); display: flex; align-items: center; justify-content: center; font-size: 28px; flex-shrink: 0; }
+.usuario-card__name  { font-weight: 700; font-size: 14px; text-transform: uppercase; color: var(--brown); }
+.usuario-card__role  { font-size: 12px; font-weight: 700; color: var(--gold); text-transform: uppercase; margin: 2px 0 6px; }
+.usuario-card__detail { font-size: 12px; color: var(--gray-700); margin-bottom: 2px; }
+.usuario-card__actions { display: flex; gap: 8px; margin-top: 14px; }
+.usuario-card__btn { border: none; border-radius: 6px; padding: 7px 12px; cursor: pointer; font-size: 15px; transition: opacity var(--transition); }
+.usuario-card__btn:hover { opacity: 0.75; }
+.usuario-card__btn--view { background: #f39c12; }
+.usuario-card__btn--edit { background: #e67e22; }
+
+.empty-state { text-align: center; padding: 60px 20px; color: var(--gray-500); }
+.empty-state h3 { font-size: 18px; font-weight: 600; color: var(--gray-700); margin-bottom: 8px; }
+
+/* ── Botón crear producto en header ── */
+.inventario__create-btn {
+  padding: 10px 22px;
+  background: var(--brown);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  transition: background var(--transition);
+}
+.inventario__create-btn:hover { background: var(--brown-mid); }
+
+/* ── Modal scrollable ── */
+.modal-overlay { align-items: flex-start; padding: 20px 16px; overflow-y: auto; }
+.modal { max-height: calc(100vh - 40px); overflow-y: auto; margin: auto; }
+
+/* ── Zona de imagen en formulario ── */
+.admin-form__img-zone {
+  width: 100%;
+  height: 160px;
+  border: 2px dashed var(--gray-300);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: border-color var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.admin-form__img-zone:hover { border-color: var(--gold); }
+.admin-form__img-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.admin-form__img-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray-500);
+  font-size: 13px;
+}
+.admin-form__img-uploading {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--gold);
+}
+.admin-form__img-change {
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  margin-bottom: 12px;
+}
+.admin-form__img-change:hover { text-decoration: underline; }
+
+/* ── Botones de tabla ── */
+.admin-btn-edit-sm {
+  padding: 5px 12px; background: #f39c12; color: #fff;
+  border: none; border-radius: 6px; font-size: 12px; font-weight: 600;
+  cursor: pointer; font-family: var(--font-body); transition: opacity .15s;
+}
+.admin-btn-edit-sm:hover { opacity: .8; }
+
+.admin-btn-danger-sm {
+  padding: 5px 12px; background: var(--red); color: #fff;
+  border: none; border-radius: 6px; font-size: 12px; font-weight: 600;
+  cursor: pointer; font-family: var(--font-body); transition: opacity .15s;
+}
+.admin-btn-danger-sm:hover { opacity: .8; }

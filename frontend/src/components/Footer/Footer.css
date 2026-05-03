@@ -1,0 +1,77 @@
+/* src/components/Footer/Footer.css */
+.footer {
+  background: var(--cream);
+  padding: 28px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-top: 2px solid var(--brown);
+  min-height: 200px;
+}
+
+.footer__section {
+  flex: 1;
+  min-width: 180px;
+}
+
+.footer__section--logo {
+  padding-right: 20px;
+  border-right: 1px solid rgba(45, 30, 14, 0.3);
+}
+.footer__section--stores {
+  padding: 0 20px;
+  border-right: 1px solid rgba(45, 30, 14, 0.3);
+  text-align: left;
+}
+.footer__section--contact {
+  padding: 0 20px;
+  border-right: 1px solid rgba(45, 30, 14, 0.3);
+  text-align: left;
+}
+.footer__section--social {
+  padding-left: 20px;
+  text-align: center;
+}
+
+.footer__logo    { width: 80px; display: block; }
+.footer__nombre  { width: 100px; display: block; margin-top: 8px; }
+.footer__app-text { color: var(--brown); font-size: 12px; margin-top: 8px; }
+
+.footer__title {
+  color: var(--brown);
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer__city {
+  color: var(--brown);
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.footer__text {
+  color: var(--brown);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.footer__social-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.footer__social-icon {
+  width: 34px;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.footer__social-icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}

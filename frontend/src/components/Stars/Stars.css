@@ -1,0 +1,4 @@
+/* src/components/Stars/Stars.css */
+.stars { display: flex; align-items: center; gap: 2px; margin-bottom: 3px; }
+.stars__star       { color: #f39c12; font-size: 14px; }
+.stars__star--empty { color: var(--gray-300); font-size: 14px; }

@@ -1,0 +1,5 @@
+/* src/components/QtyControl/QtyControl.css */
+.qty-control { display: flex; align-items: center; border: 1.5px solid var(--gray-100); border-radius: 8px; overflow: hidden; width: fit-content; }
+.qty-control__btn { width: 32px; height: 32px; background: var(--gray-50); color: var(--brown); font-size: 18px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; border: none; transition: background var(--transition); font-family: var(--font-body); }
+.qty-control__btn:hover { background: var(--gold); color: #fff; }
+.qty-control__value { width: 40px; text-align: center; font-weight: 700; font-size: 14px; border: none; outline: none; background: var(--white); color: var(--brown); font-family: var(--font-body); }

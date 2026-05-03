@@ -1,0 +1,6 @@
+/* src/components/Modal/Modal.css */
+.modal-overlay { position: fixed; inset: 0; background: rgba(45,30,14,.45); z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 16px; }
+.modal { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow-lg); padding: 32px; max-width: 460px; width: 100%; position: relative; }
+.modal__close { position: absolute; top: 14px; right: 14px; background: none; border: none; font-size: 20px; cursor: pointer; color: var(--gray-500); line-height: 1; }
+.modal__close:hover { color: var(--red); }
+.modal__title { font-size: 20px; font-weight: 700; color: var(--brown); margin-bottom: 16px; }

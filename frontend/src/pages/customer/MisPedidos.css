@@ -1,0 +1,39 @@
+/* src/pages/customer/MisPedidos.css */
+.mispedidos { max-width: 800px; margin: 0 auto; padding: 28px 20px; }
+.mispedidos__title { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--brown); margin-bottom: 20px; }
+.mispedidos__list { display: flex; flex-direction: column; gap: 14px; }
+
+.mispedidos__card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; transition: box-shadow var(--transition); }
+.mispedidos__card--open { box-shadow: var(--shadow-lg); }
+
+.mispedidos__header { display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; cursor: pointer; flex-wrap: wrap; gap: 8px; }
+.mispedidos__header:hover { background: var(--gray-50); }
+
+.mispedidos__info { display: flex; flex-direction: column; gap: 3px; }
+.mispedidos__num  { font-weight: 700; font-size: 15px; color: var(--brown); }
+.mispedidos__date { font-size: 12px; color: var(--gray-500); }
+
+.mispedidos__meta { display: flex; align-items: center; gap: 12px; }
+.mispedidos__total { font-weight: 700; font-family: var(--font-display); font-size: 18px; color: var(--brown); }
+.mispedidos__arrow { font-size: 12px; color: var(--gray-500); }
+
+.mispedidos__detail { padding: 0 20px 20px; border-top: 1px solid var(--cream-dark); }
+
+.mispedidos__section { margin-top: 16px; margin-bottom: 12px; }
+.mispedidos__section-title { font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .5px; color: var(--gray-700); margin-bottom: 10px; }
+
+.mispedidos__item { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--cream-dark); font-size: 14px; }
+.mispedidos__item:last-child { border-bottom: none; }
+.mispedidos__item-info { display: flex; gap: 10px; align-items: center; }
+.mispedidos__item-name  { color: var(--brown); font-weight: 500; }
+.mispedidos__item-qty   { color: var(--gray-500); font-size: 13px; }
+.mispedidos__item-price { font-weight: 700; color: var(--green); }
+
+.mispedidos__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 13px; color: var(--gray-700); margin-top: 14px; }
+
+.mispedidos__pay { margin-top: 16px; padding: 14px 16px; background: #fff8e6; border-radius: 8px; border: 1px solid #fbbf24; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.mispedidos__pay-text { font-size: 13px; color: #92400e; font-weight: 500; }
+.mispedidos__pay-btn  { padding: 10px 20px; background: var(--gold); color: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: var(--font-body); transition: background var(--transition); }
+.mispedidos__pay-btn:hover { background: var(--gold-light); }
+
+.mispedidos__payment-info { margin-top: 14px; padding: 12px 14px; background: #f0fdf4; border-radius: 8px; border: 1px solid #86efac; }
